@@ -7,9 +7,22 @@ description: Post image-based notes (图文笔记) to 小红书 (Xiaohongshu/Red
 
 ## Setup
 
+### Installation
+
+If you haven't installed `md2red` yet, clone it into the `xiaohongshu` folder (parallel to this skill file) and install its dependencies:
+
+```bash
+cd /path/to/xiaohongshu
+git clone https://github.com/ununununium/md2red
+cd md2red
+pip install -r requirements.txt
+```
+
+### Configuration
+
 Configure these before first use:
 
-- **md2red script path:** path to your `md2red.py` install (see [md2red](https://github.com/your-org/md2red))
+- **md2red script path:** path to your `md2red.py` install (see [md2red](https://github.com/ununununium/md2red))
 - **Browser:** `profile=openclaw` only — already logged in. **Never use Chrome relay** (CDP disconnects on Xiaohongshu page navigation)
 - **Content plan:** a markdown file in your workspace (e.g. `xiaohongshu-content-plan.md`)
 - **Account profile ID:** your Xiaohongshu profile ID (visible in profile URL)
@@ -31,7 +44,7 @@ Read your content plan file, find the post scheduled for this time slot.
 Save your markdown to the md2red input file, then run:
 
 ```bash
-cd /path/to/md2red && python3 md2red.py input.md --output <name>
+cd /path/to/xiaohongshu/md2red && python3 md2red.py input.md --output <name>
 ```
 
 Images output to `output/<name>/` (1.png, 2.png, …)
