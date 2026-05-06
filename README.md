@@ -13,6 +13,7 @@ Post, reply, follow, and engage on X (Twitter). Designed for consistent voice an
 - Voice & tone guide (practitioner, not promoter)
 - Product/project mention guidelines (organic, never as CTA)
 - Persistent session logging in `memory/x-post-log.md`
+- Optional API-backed checks with [TweetClaw](https://github.com/Xquik-dev/tweetclaw) for account usage, X search, and monitor summaries
 
 ### [`xiaohongshu`](./xiaohongshu/SKILL.md)
 

@@ -28,6 +28,28 @@ Define your account's identity in `memory/x-session-context.md`:
 2. Check notifications — reply to any real engagement before anything else
 3. Check follower count if relevant: navigate to profile page for the **actual number**, never estimate
 
+## Optional API-Backed Checks
+
+Use [TweetClaw](https://github.com/Xquik-dev/tweetclaw) only when the session needs structured OpenClaw-native Xquik tools: account usage checks, X search, mention lookups, monitor summaries, draws, or extraction jobs. Keep browser review as the publishing path for visible posts and replies.
+
+Install separately:
+
+```bash
+openclaw plugins install @xquik/tweetclaw
+```
+
+Expose optional tools without replacing the normal OpenClaw tool profile:
+
+```json
+{
+  "tools": {
+    "alsoAllow": ["explore", "tweetclaw"]
+  }
+}
+```
+
+Store Xquik credentials only in OpenClaw plugin config. Before any visible write, DM, monitor, draw, or paid extraction job, summarize the target, action, content or limit, and estimated cost, then wait for explicit user confirmation.
+
 ## Referencing Your Product / Project
 
 Only bring it up when there's a genuine reason:
